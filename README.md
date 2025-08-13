@@ -1,6 +1,7 @@
 
 # Weather Glass 🌤️
 Weather Glass is a lightweight web app to check live weather for any city with a sleek, user-friendly interface.
+
 Demo: [https://rishabh-43.github.io/weather-glass/](https://rishabh-43.github.io/weather-glass/)
 
 ## Features
