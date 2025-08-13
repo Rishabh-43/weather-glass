@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Glass</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/times-new-roman');
+  </style>
+</head>
+<body>
+  <video autoplay muted loop playsinline id="bgVideo">
+    <source src="./backgrounds/clear.mp4" type="video/mp4">
+  </video>
+
+  <div class="weather-glass">
+    <div class="header">
+      <h1>Weather Glass</h1>
+      <div class="theme-switch" onclick="toggleTheme()">
+        <div class="switch-handle"></div>
+      </div>
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="cityInput" placeholder="Search for a city...">
+      <button class="search-btn" onclick="getWeather()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="weather-display">
+      <div class="location" id="location">--</div>
+      <div class="temperature" id="temperature">--°</div>
+      <div class="conditions" id="conditions">Enter location</div>
+      <img id="weatherIcon" class="weather-icon" src="" alt="">
+    </div>
+
+    <div class="additional-info">
+      <div class="info-card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+        </svg>
+        <div>
+          <span id="sunrise">--:--</span>
+          <span>Sunrise</span>
+        </div>
+      </div>
+      <div class="info-card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <div>
+          <span id="sunset">--:--</span>
+          <span>Sunset</span>
+        </div>
+      </div>
+      <div class="info-card aqi">
+        <div class="aqi-circle" id="aqiCircle">--</div>
+        <div>
+          <span>Air Quality</span>
+          <span id="aqiText">--</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="weather.js"></script>
+</body>
+</html>
