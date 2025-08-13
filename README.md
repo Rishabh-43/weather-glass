@@ -28,7 +28,3 @@ Fork > Branch > Commit > Push > Pull Request
 ## License
 
 MIT
-
----
-
-If you want, I can also create the **super short, modern version with GitHub badges** so it looks very clean and professional on your repo. Do you want me to do that?
